@@ -1,3 +1,6 @@
+# Custom
+data/logs/*.log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -5,6 +8,10 @@ __pycache__/
 
 # C extensions
 *.so
+
+# Database Files
+*.db
+*.db-journal
 
 # Distribution / packaging
 .Python
