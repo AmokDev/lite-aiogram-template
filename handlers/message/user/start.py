@@ -8,4 +8,7 @@ router = Router()
 
 @router.message(CommandStart())
 async def start(msg: Message):
-    await msg.reply("Hi, this is start message", reply_markup=kb.example_keyboard())
+    await msg.reply(
+        "Hi, this is start message",
+        reply_markup=kb.example_keyboard()
+    )

@@ -17,3 +17,12 @@ def example_keyboard():
     kb.row(callback_button)
     kb.row(url_button)
     return kb.as_markup()
+
+def example_admin_keyboard():
+    kb = ikb()
+    admin_secret_callback_button = btn(
+        text = "View Secret Info",
+        callback_data = "view_secret_info"
+    )
+    kb.row(admin_secret_callback_button)
+    return kb.as_markup()

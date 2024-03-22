@@ -10,7 +10,7 @@ async def reg_middlewares(dp: Dispatcher):
     dp.message.middleware(ThrottlingMiddleware())
 
 async def main():
-    bot = Bot(token)
+    bot = Bot(token, parse_mode="HTML")
     dp = Dispatcher()
     await set_default_commands(bot)
     await on_startup_notify(bot)
