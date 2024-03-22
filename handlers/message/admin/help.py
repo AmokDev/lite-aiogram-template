@@ -2,8 +2,8 @@ from aiogram import Router
 from aiogram.filters import Command
 from aiogram.types import Message
 
-from filters.admin.isBotAdmin import isBotAdmin
-from filters.user.ChatType import ChatType
+from filters.admin.is_bot_admin import isBotAdmin
+from filters.user.chat_type import ChatType
 from keyboards.inline import kb
 
 router = Router()

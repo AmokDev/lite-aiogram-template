@@ -1,11 +1,11 @@
 from aiogram import Router, F
 from aiogram.types import InlineQuery, InputTextMessageContent, InlineQueryResultArticle
 
-from filters.admin.isBotAdmin import isBotAdminQ
+from filters.admin.is_bot_admin import isBotAdmin
 
 router = Router()
 router.inline_query.filter(
-    isBotAdminQ()
+    isBotAdmin()
 )
 
 @router.inline_query(F.query == "admin")

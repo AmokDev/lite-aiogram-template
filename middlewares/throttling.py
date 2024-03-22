@@ -3,11 +3,11 @@ from aiogram import BaseMiddleware
 from aiogram.types import Update
 from cachetools import TTLCache
 
-from data.config import throttling_range
+from data.config import THROTTLING_RANGE
 
 class ThrottlingMiddleware(BaseMiddleware):
     def __init__(self):
-        self.cache = TTLCache(maxsize=10_000, ttl=throttling_range)
+        self.cache = TTLCache(maxsize=10_000, ttl=THROTTLING_RANGE)
 
     async def __call__(
         self,

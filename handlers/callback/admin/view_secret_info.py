@@ -1,11 +1,11 @@
 from aiogram import Router, F
 from aiogram.types import CallbackQuery
 
-from filters.admin.isBotAdmin import isBotAdminCall
+from filters.admin.is_bot_admin import isBotAdmin
 
 router = Router()
 router.callback_query.filter(
-    isBotAdminCall()
+    isBotAdmin()
 )
 
 @router.callback_query(F.data == "view_secret_info")

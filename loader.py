@@ -1,6 +1,6 @@
 from aiogram import Bot, Dispatcher
 
-from data.config import token
+from data.config import TOKEN
 from utils.routers import reg_routers
 from utils.notify_admins import on_startup_notify
 from utils.set_bot_commands import set_default_commands
@@ -10,7 +10,7 @@ async def reg_middlewares(dp: Dispatcher):
     dp.message.middleware(ThrottlingMiddleware())
 
 async def main():
-    bot = Bot(token, parse_mode="HTML")
+    bot = Bot(TOKEN, parse_mode="HTML")
     dp = Dispatcher()
     await set_default_commands(bot)
     await on_startup_notify(bot)

@@ -6,6 +6,6 @@ router = Router()
 @router.callback_query(F.data == "view_info")
 async def view_info(call: CallbackQuery):
     await call.answer(
-        "My teaction to that information -> 😶‍🌫️",
+        "My reaction to that information -> 😶‍🌫️",
         show_alert = True
     )

@@ -1,16 +1,16 @@
-from aiogram.utils.keyboard import InlineKeyboardBuilder as ikb
+from aiogram.utils.keyboard import InlineKeyboardBuilder as Builder
 from aiogram.types import (
-    InlineKeyboardButton as btn,
+    InlineKeyboardButton as Button,
     WebAppInfo
 )
 
 def example_keyboard():
-    kb = ikb()
-    url_button = btn(
+    kb = Builder()
+    url_button = Button(
         text = "Open URL",
         url = "https://t.me/amokek"
     )
-    callback_button = btn(
+    callback_button = Button(
         text = "View Info",
         callback_data = "view_info"
     )
@@ -19,8 +19,8 @@ def example_keyboard():
     return kb.as_markup()
 
 def example_admin_keyboard():
-    kb = ikb()
-    admin_secret_callback_button = btn(
+    kb = Builder()
+    admin_secret_callback_button = Button(
         text = "View Secret Info",
         callback_data = "view_secret_info"
     )

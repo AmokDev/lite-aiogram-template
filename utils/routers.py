@@ -10,4 +10,4 @@ async def reg_routers(dp: Dispatcher):
         module = import_module(mod)
         dp.include_router(module.router)
         routers_count += 1
-    logging.info(f"{routers_count} routers was handled!")
+    logging.info(f"Imported {routers_count} routers!")
