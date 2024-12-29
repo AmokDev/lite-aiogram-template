@@ -10,9 +10,10 @@ from middlewares.throttling import ThrottlingMiddleware
 async def reg_middlewares(dp: Dispatcher):
     dp.message.middleware(ThrottlingMiddleware())
 
+bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode="HTML"))
+dp = Dispatcher()
+
 async def main():
-    bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode="HTML"))
-    dp = Dispatcher()
     await set_default_commands(bot)
     await on_startup_notify(bot)
     await reg_middlewares(dp)
