@@ -14,7 +14,7 @@ async def is_iam_admin(q: InlineQuery):
         id = "2",
         title = "Is I'm admin?",
         input_message_content = InputTextMessageContent(
-            message_text = f"Yes, I'm an admin!"
+            message_text = "Yes, I'm an admin!"
         )
     )
     await q.answer(
